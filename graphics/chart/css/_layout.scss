@@ -1,3 +1,67 @@
 .article-graphic.chart {
-	
+
+	font-family: $sansSerif;
+	@include adjust-font-size-to($s3p5);
+	@include adjust-leading-to(1);
+
+	p.projects-category-hed {
+		margin: 0;
+		padding: 0;
+		font-family: $sansSerifStrong;
+		@include adjust-font-size-to($s5);
+	}
+
+	p.projects-category-subhed {
+		margin: 0;
+		padding: 0;
+		@include trailing-border();
+		border-width: 1px;
+		border-color: #e2e2df;
+		@include rhythm(0, 0, 1/2, 1);
+	}
+
+	.projects {
+
+		@include rhythm(0, 0, 0, 2);
+
+		li {
+			@include rhythm(0, 0, 0, 1);
+		}
+	}
+
+	.bar-wrapper {
+
+		width: 100%;
+		overflow: hidden;
+
+		.value {
+			span {
+				position: relative;
+				left: 0.25em;
+				font-family: $sansSerifStrong;
+			}
+		}
+
+		.bar {
+			overflow: hidden;
+			float: left;
+			position: relative;
+
+			.committed {
+				background: #edece4;
+				float: left;
+				span {
+					font-family: $sansSerifStrong;
+				}
+			}
+			.gap {
+				background: #bf6151;
+				float: left;
+				text-align: center;
+				span {
+					font-family: $sansSerifStrong;
+				}
+			}
+		}
+	}
 }
