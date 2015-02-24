@@ -24,6 +24,13 @@
 		var util = require('../../../../common/js/util.js');
 		var Humanize = require('humanize-plus');
 
+		function humanize(x) {
+			var part = Humanize.compactInteger(x, 1);
+			var first = part.slice(0, part.length - 1);
+			var last = part.slice(-1);
+			return ['$', +first, last].join('');
+		}
+
 		projects.forEach(function(project, index) {
 
 			var width = 100*project['Total Cost']/max; %>
@@ -35,10 +42,10 @@
 					<div class='bar-wrapper'>
 						<div class='bar' style='width: <%= width %>%'>
 							<div class='committed' style='width: <%= 100*project.Committed/project['Total Cost'] %>%'><span>&nbsp;</span></div>
-							<div class='gap' style='width: <%= 100*project.Delta/project['Total Cost'] %>%'><span><%= width > 30 ? "$" + Humanize.compactInteger(project.Delta) : '&nbsp;' %></span></div>
+							<div class='gap' style='width: <%= 100*project.Delta/project['Total Cost'] %>%'><span><%= width > 30 ? humanize(project.Delta) : '&nbsp;' %></span></div>
 						</div>
 
-						<div class='value'><span><%= width > 30 ? '' : "$" + Humanize.compactInteger(project.Delta) %></span></div>
+						<div class='value'><span><%= width > 30 ? '' : humanize(project.Delta) %></span></div>
 					</div>
 				<% } %>
 
@@ -48,7 +55,7 @@
 							<div class='committed' style='width: <%= 100*project.Committed/project['Total Cost'] %>%'><span>&nbsp;</span></div>
 						</div>
 
-						<div class='value'><span><%= "$" + Humanize.compactInteger(project.Committed) %></span></div>
+						<div class='value'><span><%= humanize(project.Committed) %></span></div>
 					</div>
 				<% } %>
 
