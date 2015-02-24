@@ -15,6 +15,18 @@
 		padding-right: 3.5em;
 	}
 
+	.highlight-gap {
+		font-family: $sansSerifStrong;
+		background: #bf6151;
+		padding: 0.125em 0.35em;
+	}
+
+	.committed-gap {
+		font-family: $sansSerifStrong;
+		background: #edece4;
+		padding: 0.125em 0.35em;
+	}
+
 	.content {
 		text-align: left;
 		font-family: $sansSerif;

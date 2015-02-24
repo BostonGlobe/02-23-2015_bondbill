@@ -1,0 +1,26 @@
+Project,Total Cost,Committed,In Bond Bill,Gap,gap subt,Category,FUNDED,running gap,catGaps,cat costs,cat funding
+Green Line extension to Route 16,1900000000,1900000000,Omnibus T item,0,0,Rail,fully,0,,,
+I-90 all-electronic tolls,191000000,191000000,0,0,0,Roads,fully,0,,,
+Reconfiguring I-90 interchange Allston/Brighton,161000000,161000000,0,0,0,Roads,fully,0,,,
+Silver Line to Chelsea,62000000,62000000,Omnibus T item,0,0,Bus,fully,0,,,
+North Station expansion,20000000,20000000,0,0,0,Station,fully,0,,,
+Boston Landing infill Commuter Rail station,16000000,16000000,0,0,0,Station,fully,0,0,2350000000,2350000000
+"Rail extension to New Bedford, Fall River",2300000000,255000000,"2,300,000,000",2045000000,2045000000,Rail,partial,2045000000,,,
+South Station expansion,1430000000,245000000,"325,000,000",1230000000,1185000000,Station,partial,3275000000,,,
+Green Line vehicles,732000000,123000000,Omnibus T item,600000000,609000000,Rail,partial,3875000000,,,
+"Diesel rail, Back Bay-Newton",400000000,190000000,Omnibus T item,210000000,210000000,Rail,partial,4085000000,,,
+Signal/power upgrades,275000000,183000000,Omnibus T item,92000000,92000000,Other,partial,4177000000,,,
+"Commuter rail stop, Allston",25000000,16700000,0,8300000,8300000,Station,partial,4185300000,4149300000,5162000000,1012700000
+Intercity rail improvements,150000000,0,?,150000000,150000000,Rail,unfunded,4335300000,,,
+Enhanced bus service to JFK/Umass,140000000,0,0,140000000,140000000,Station,unfunded,4475300000,,,
+"Bus platform, JFK/Umass",46000000,0,0,46000000,46000000,Station,unfunded,4521300000,,,
+"Green Line crossover, Park Station",4000000,0,0,4000000,4000000,Rail,unfunded,4525300000,,,
+Red Line overhaul,3000000,0,0,3000000,3000000,Rail,unfunded,4528300000,343000000,"343,000,000",0
+Morrissey Blvd./Columbia Rd./I-93 ramps,Unknown,0,0,,,Roads,unk,,,,
+I-93 S. Boston interchange,Unknown,0,0,,,Roads,unk,,,,
+Allston Beacon Yards,Not known,Venue Cost,0,,,Other,unk,,,,
+Broadcast Media Center,Not known,Venue Cost,0,,,Other,unk,,,,
+S. Boston Waterfront,Not known,Venue Cost,0,,,Other,unk,,,,
+Athletes Village roads,Not known,Venue Cost,0,,,Roads,unk,,,,
+Bus facilities,?,?,?,,,Bus,unk,,,,
+Heavy rail improvements,4000000,0,O,,,Rail,unk,,,,

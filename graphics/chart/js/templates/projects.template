@@ -3,12 +3,20 @@
 	<%= {
 		'partial': 'Partially funded projects',
 		'unfunded': 'Unfunded projects',
-		'unk': '',
+		'unk': 'Projects with unknown cost and committed funding',
 		'fully': 'Fully funded projects'
 	}[status]
 	%>
 	</p>
-	<p class='projects-category-subhed'>Lorem ipsum Pariatur esse fugiat amet pariatur est velit sed consectetur aliquip proident velit non laborum aliquip Duis.</p>
+	<p class='projects-category-subhed'>
+	<%= {
+		'partial': 'Six projects with a total cost of $5.16 billion have $1 billion committed to them, leaving <span class="highlight-gap">a gap of $4.16 billion.</span>',
+		'unfunded': 'Five projects with a total cost of $343 million have <span class="highlight-gap">no funds committed.</span>',
+		'unk': '',
+		'fully': 'Six projects with a total cost of $2.35 billion have been <span class="committed-gap">fully funded.</span>'
+	}[status]
+	%>
+	</p>
 	<ul class='projects'>
 
 		<%
