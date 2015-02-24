@@ -19,6 +19,8 @@ var data = _.chain(require('../../../data/data.json'))
 					}
 					return project;
 				})
+				.sortBy('Project')
+				.reverse()
 				.sortBy('Total Cost')
 				.reverse()
 				.value()

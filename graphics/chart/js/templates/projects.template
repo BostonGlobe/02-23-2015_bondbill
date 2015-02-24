@@ -31,7 +31,7 @@
 			<li>
 				<div class='name'><span><%= project.Project %></span></div>
 
-				<% if (status !== 'unk') { %>
+				<% if (status !== 'unk' && status !== 'fully') { %>
 					<div class='bar-wrapper'>
 						<div class='bar' style='width: <%= width %>%'>
 							<div class='committed' style='width: <%= 100*project.Committed/project['Total Cost'] %>%'><span>&nbsp;</span></div>
@@ -39,6 +39,16 @@
 						</div>
 
 						<div class='value'><span><%= width > 30 ? '' : "$" + Humanize.compactInteger(project.Delta) %></span></div>
+					</div>
+				<% } %>
+
+				<% if (status === 'fully') { %>
+					<div class='bar-wrapper'>
+						<div class='bar' style='width: <%= width %>%'>
+							<div class='committed' style='width: <%= 100*project.Committed/project['Total Cost'] %>%'><span>&nbsp;</span></div>
+						</div>
+
+						<div class='value'><span><%= "$" + Humanize.compactInteger(project.Committed) %></span></div>
 					</div>
 				<% } %>
 
