@@ -1,40 +1,42 @@
-<p class='projects-category-hed'>
-<%= {
-	'partial': 'Partially funded projects',
-	'unfunded': 'Unfunded projects',
-	'unk': '',
-	'fully': 'Fully funded projects'
-}[status]
-%>
-</p>
-<p class='projects-category-subhed'>Lorem ipsum Pariatur esse fugiat amet pariatur est velit sed consectetur aliquip proident velit non laborum aliquip Duis.</div>
-<ul class='projects'>
+<div class='projects-category <%= status === 'partial' ? '' : 'rest' %>'>
+	<p class='projects-category-hed'>
+	<%= {
+		'partial': 'Partially funded projects',
+		'unfunded': 'Unfunded projects',
+		'unk': '',
+		'fully': 'Fully funded projects'
+	}[status]
+	%>
+	</p>
+	<p class='projects-category-subhed'>Lorem ipsum Pariatur esse fugiat amet pariatur est velit sed consectetur aliquip proident velit non laborum aliquip Duis.</p>
+	<ul class='projects'>
 
-	<%
+		<%
 
-	var util = require('../../../../common/js/util.js');
-	var Humanize = require('humanize-plus');
+		var util = require('../../../../common/js/util.js');
+		var Humanize = require('humanize-plus');
 
-	projects.forEach(function(project, index) {
+		projects.forEach(function(project, index) {
 
-		var width = 100*project['Total Cost']/max; %>
-		
-		<li>
-			<div class='name'><span><%= project.Project %></span></div>
+			var width = 100*project['Total Cost']/max; %>
+			
+			<li>
+				<div class='name'><span><%= project.Project %></span></div>
 
-			<% if (status !== 'unk') { %>
-				<div class='bar-wrapper'>
-					<div class='bar' style='width: <%= width %>%'>
-						<div class='committed' style='width: <%= 100*project.Committed/project['Total Cost'] %>%'><span>&nbsp;</span></div>
-						<div class='gap' style='width: <%= 100*project.Delta/project['Total Cost'] %>%'><span><%= width > 30 ? "$" + Humanize.compactInteger(project.Delta) : '&nbsp;' %></span></div>
+				<% if (status !== 'unk') { %>
+					<div class='bar-wrapper'>
+						<div class='bar' style='width: <%= width %>%'>
+							<div class='committed' style='width: <%= 100*project.Committed/project['Total Cost'] %>%'><span>&nbsp;</span></div>
+							<div class='gap' style='width: <%= 100*project.Delta/project['Total Cost'] %>%'><span><%= width > 30 ? "$" + Humanize.compactInteger(project.Delta) : '&nbsp;' %></span></div>
+						</div>
+
+						<div class='value'><span><%= width > 30 ? '' : "$" + Humanize.compactInteger(project.Delta) %></span></div>
 					</div>
+				<% } %>
 
-					<div class='value'><span><%= width > 30 ? '' : "$" + Humanize.compactInteger(project.Delta) %></span></div>
-				</div>
-			<% } %>
+			</li>
 
-		</li>
+		<% }) %>
 
-	<% }) %>
-
-</ul>
+	</ul>
+</div>

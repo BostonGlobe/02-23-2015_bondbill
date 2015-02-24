@@ -1,8 +1,30 @@
 .article-graphic.chart {
 
-	font-family: $sansSerif;
-	@include adjust-font-size-to($s3p5);
-	@include adjust-leading-to(1);
+	text-align: center;
+	@include rhythm(0, 0, 0, 2);
+
+	button {
+		&:before {
+			content: 'Show ';
+		}
+		&.expanded:before {
+			content: 'Hide ';
+		}
+		@include rhythm-margins(-1, 1);
+		padding-left: 3.5em;
+		padding-right: 3.5em;
+	}
+
+	.content {
+		text-align: left;
+		font-family: $sansSerif;
+		@include adjust-font-size-to($s3p5);
+		@include adjust-leading-to(1);
+	}
+
+	.projects-category.rest {
+		display: none;
+	}
 
 	p.projects-category-hed {
 		margin: 0;

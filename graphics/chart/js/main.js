@@ -44,3 +44,8 @@ var html = data.map(function(v, i) {
 }).join('');
 
 $('.content', master).html(html);
+
+$('button', master).click(function(e) {
+	$(this).toggleClass('expanded');
+	$('.projects-category.rest', master).toggle();
+});
